@@ -40,9 +40,11 @@ function StudentListPage(props) {
                     <ul>
                     {
                     data.students.map(student => 
-                        <li>
-                            <h4>{student.firstName} {student.lastName}</h4>
-                        </li>
+                        <div key={student.id}>
+                            <li>
+                                <h4>{student.firstName} {student.lastName}</h4>
+                            </li>
+                        </div>
                         )
                     }
                     </ul>
