@@ -1,0 +1,22 @@
+{
+  "name": "skilltest",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000s\u0000i\u0000l\u0000l\u0000-\u0000t\u0000e\u0000s\u0000t\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElderNobrega/sill-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElderNobrega/sill-test/issues"
+  },
+  "homepage": "https://github.com/ElderNobrega/sill-test#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
