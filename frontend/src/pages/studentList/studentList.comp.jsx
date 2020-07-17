@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import {useHistory} from 'react-router-dom';
+import axios from 'axios';
 
 import './studentList.style.css';
-import { Link } from 'react-router-dom';
 
 function StudentListPage(props) {
 
     const [name, setName] = useState('')
-    const [client, setClient] = useState([])
+    const [clients, setClient] = useState([])
 
     const history = useHistory();
 
@@ -16,7 +16,16 @@ function StudentListPage(props) {
         history.push('/search/' + name)
       }
 
-    useEffect
+    useEffect(() => {
+        const getData = async () => {
+            const {data} = await axios.get('/api/clients');
+            setClient(data);
+        }
+        getData()
+        return () => {
+
+        }
+    }, [])
 
     return (
         <div className="student-list">
@@ -24,10 +33,10 @@ function StudentListPage(props) {
                 <div className="list">
                     <ul>
                     {
-                    data.students.map(student => 
-                        <div key={student.id}>
+                    clients.map(client => 
+                        <div key={client.id}>
                             <li>
-                                <h4>{student.firstName} {student.lastName}</h4>
+                                <h4>{client.firstName} {client.lastName}</h4>
                             </li>
                         </div>
                         )

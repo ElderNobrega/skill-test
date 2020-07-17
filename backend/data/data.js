@@ -1,5 +1,5 @@
 export default {
-    students: [
+    client: [
         {
             id: '1',
             firstName: 'Jhon',
