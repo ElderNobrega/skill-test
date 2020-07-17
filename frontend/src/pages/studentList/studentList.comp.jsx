@@ -1,20 +1,22 @@
 import React from 'react';
 
+import data from '../../Data/data';
+
+import './studentList.style.css';
+
 function StudentListPage(props) {
     return (
         <div className="student-list">
             <div className="list-container">
                 <div className="list">
                     <ul>
+                    {
+                    data.students.map(student => 
                         <li>
-                            Student 1
+                            <h4>{student.firstName} {student.lastName}</h4>
                         </li>
-                        <li>
-                            Student 2
-                        </li>
-                        <li>
-                            Student 3
-                        </li>
+                        )
+                }
                     </ul>
                 </div>
             </div>
