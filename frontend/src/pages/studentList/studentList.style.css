@@ -1,5 +1,4 @@
 .student-list {
-    display: flex;
     flex-direction: 'table-colunm';
     align-items: center;
     padding: 20px 80px;
