@@ -2,7 +2,7 @@ import express from 'express';
 import data from './data/data';
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000
 
 app.get('/api/clients', (req, res) => {
     res.send(data.client)
